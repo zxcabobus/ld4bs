@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+            <div class="container">
+        <form>
+            <div class="row form-group">
+                <div class="col">
+                    <label for="firstName">Имя</label>
+                    <input type="text" id="firstName" class="form-control form-control-lg" placeholder="Введите имя">
+                </div>
+                <div class="col">
+                    <label for="SecondName">Фамилия</label>
+                    <input type="text" id="SecondName" class="form-control form-control-lg" placeholder="Введите фамилию">
+                </div>
+                <div class="col">
+                    <label for="LastName">Отчество</label>
+                    <input type="text" id="LastName" class="form-control form-control-lg" placeholder="Введите отчество">
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col form-group">
+                    <label for="city">Город</label>
+                    <select id="city" class="form-control form-control-sm">
+                        <option selected>Томск</option>
+                        <option>Новосибирск</option>
+                        <option>Санкт-Петербург</option>
+                        <option>Москва</option>
+                        <option>Северск</option>
+                    </select>
+                </div>
+                <div class="col">
+                    <label for="date">Дата рождения</label>
+                    <input type="date" class="form-control form-control-sm">
+                </div>
+                <div class="col">
+                    <label for="gender">Пол</label>
+                    <select id="gender" class="form-control form-control-sm">
+                        <option>Мужской</option>
+                        <option>Женский</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                    <label id="sliderAmount" for="sliderID">Я хочу купить</label>
+                <input type="range" class="custom-range" min="0" max="100" id="sliderID">
+            </div>
+            <div class="form-group">
+                <label for="emailID">Почта</label>
+                <input type="email" class="form-control" id="emailID" aria-describedby="help" placeholder="Введите email">
+            </div>
+
+            <div class="form-group">
+                <label for="passID">Пароль</label>
+                <input type="password" class="form-control" id="passID" placeholder="Введите пароль">
+            </div>
+            <div class="form-group">
+                <label for="passRP">Повторите пароль</label>
+                <input type="password" id="passRP" class="form-control" placeholder="Повторите пароль">
+            </div>
+            <div class="form-group">
+                <div>
+                    <h6>Особые пожелания</h6>
+                    <input type="checkbox" id="delivery">
+                    <label for="delivery">Доставка до двери</label>
+                    <br>
+                    <input type="checkbox" id="card">
+                    <label for="card">Безналичный расчёт</label>
+                    <br>
+                    <input type="checkbox" id="double">
+                    <label for="double">Двойная упоковка</label>
+                    <br>
+                    <input type="checkbox" id="gift">
+                    <label for="gift">Подарочная упоковка</label>
+                </div>
+            </div>
+            <p><textarea class="form-control" placeholder="Пожелания" cols="30" rows="5"></textarea></p>
+            <br>
+            <button type="submit" class="btn btn-primary">Оформить заказ</button>
+        </form>
+      </div>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        $("#sliderID").on('change',function(){
+            $('#sliderAmount').text("Я хочу купить"+"  "+$('#sliderID').val()+"  "+"штук");
+        });
+    </script>
+  </body>
+</html>
